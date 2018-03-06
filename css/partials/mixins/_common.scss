@@ -1,0 +1,64 @@
+// Mixin to define transitions
+
+@mixin transition($property, $duration, $style, $delay: null) {
+  -webkit-transition: $property $duration $style $delay;
+  -moz-transition: $property $duration $style $delay;
+  -ms-transition: $property $duration $style $delay;
+  transition: $property $duration $style $delay;
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin translate($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin translate3d($x, $y, $z) {
+   @include transform(translate3d($x, $y, $z));
+}
+
+
+
+// Mixin to define media queries
+
+@mixin responsive($width, $orientation){
+  @if $width == dxlarge {
+    @media screen and  (max-width: $desktop-xlarge) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == dlarge {
+    @media screen and (max-width: $desktop-large) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == dsmall {
+    @media screen and (max-width: $desktop-small) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == tlarge {
+    @media screen and (max-width: $tablet-large) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == tmed {
+    @media screen and (max-width: $tablet-medium) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == tsmall {
+    @media screen and (max-width: $tablet-small) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == mlarge {
+    @media screen and (max-width: $mobile-large) and (orientation: $orientation) {
+      @content;
+    }
+  } @else if $width == msmall {
+    @media screen and (max-width: $mobile-small) and (orientation: $orientation) {
+      @content;
+    }
+  }
+}

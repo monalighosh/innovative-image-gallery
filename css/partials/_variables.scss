@@ -1,0 +1,53 @@
+// Font family
+$roboto: 'Roboto', sans-serif !default;
+$ubuntu-mono: 'Ubuntu Mono', monospace;
+
+// Font size
+$font-size-base: 1rem !default; // 16px
+$font-size-small: $font-size-base * 0.875; // 14px;
+$font-size-large: $font-size-base * 1.125; // 18px
+$font-size-larger: $font-size-base * 1.25; // 20px;
+
+// Headings size
+$font-size-h1: $font-size-base * 3; // 30px
+$font-size-h2: $font-size-base * 1.5; // 24px
+$font-size-h3: $font-size-base * 1.17; // 19px
+$font-size-h4: $font-size-base; // 16px
+
+// Font Weight
+$font-weight-light: 300;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Colors
+$black: #000000;
+$blue-grey: #f3f5f8;
+$green: #6dc552;
+$orange: #ff9948;
+$pink: #eb74aa;
+$purple: #6a88dd;
+$white: #ffffff;
+
+$blue-sky: #51d0ef;
+$blue-sky-light: lighten($blue-sky, 34%); // #f0fbfe
+
+$blue: #e5edf7;
+$blue-light: lighten($blue, 3%); // #f1f5fb
+
+$grey: #c3ced9;
+$grey-light: lighten($grey, 15%); // #f2f4f7
+
+$primary-grey: #7e96ac;
+$primary-grey-dark: darken($primary-grey, 29%); // #393f44
+$primary-grey-darker: darken($primary-grey, 40%); // #1f2326
+
+// Media queries
+$mobile-small: 360px;
+$mobile-large: 500px;
+$tablet-small: 750px;
+$tablet-medium: 800px;
+$tablet-large: 1024px;
+$desktop-small: 1280px;
+$desktop-large: 1450px;
+$desktop-xlarge: 1950px;

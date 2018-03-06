@@ -1,0 +1,58 @@
+/* Base Styles ******************************************/
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: $blue-grey;
+	color: $primary-grey;
+	font-family: $roboto;
+	font-size: $font-size-base;
+	font-weight: $font-weight-regular;
+	line-height: $font-size-base * 1.5;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	border: none;
+	text-decoration: none;
+}
+
+h1 {
+	color: #94a5bf;
+	font-size: $font-size-h1;
+	margin: 4rem;
+	text-align: center;
+	font-weight: $font-weight-medium;
+	line-height: 1.4;
+}
+
+/* Wrapper */
+
+.wrapper {
+	background: $white;
+	border-radius: 5px;
+	border: 1px solid $blue;
+	padding: 4rem;
+	width: 95%;
+	margin: 0 auto;
+	text-align: center;
+
+	@include responsive(tsmall, portrait){
+		padding: 2rem;
+	}
+
+	@include responsive(mlarge, portrait){
+		padding: 1rem;
+		width: 100%;
+	}
+}
