@@ -29,11 +29,23 @@ a:active {
 
 h1 {
 	color: #94a5bf;
-	font-size: $font-size-h1;
+	font-size: $font-size-base * 3;
 	margin: 4rem;
 	text-align: center;
 	font-weight: $font-weight-medium;
 	line-height: 1.4;
+
+	@include responsive(tlarge, portrait){
+		font-size: $font-size-base * 2.5;
+	}
+
+	@include responsive(tsmall, portrait){
+		font-size: $font-size-base * 2.3;
+	}
+
+	@include responsive(mlarge, portrait){
+		font-size: $font-size-base * 2.1;
+	}
 }
 
 /* Wrapper */
